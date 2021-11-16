@@ -1,0 +1,96 @@
+<html>
+<head>
+<script>
+
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+t=setTimeout(function(){startTime()},500);
+}
+
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+</script>
+
+<style>
+a:link {text-decoration:none;}    /* unvisited link */
+a:visited {text-decoration:none;} /* visited link */
+</style>
+
+
+</head>
+<body onload="startTime()" >
+<div  align="right" id="txt"></div>
+
+
+
+<a href="images/logo1.png">
+<img  src="images/logo1.png" height="50px" align="left">
+
+
+</a>
+
+           <a  href="login.html" style="float:right;">Logout</a>
+          <br>           
+          <br>
+        <div align="right">Profile</div>                           
+    
+    
+    <hr color="red" height="0.5" > 
+    <form>
+                
+           <table align="left" >
+           <tr>
+                                 <ol>
+                                 <td>
+                                    <a href="HOME.html" >Home</a>
+                                  <hr color="#FFF0F5">
+                                  <a href="profile.html">My Profile</a>
+                                  <hr color="#FFF0F5">
+                                  <a href="my resum.html">My Resume</a>
+                                  <hr color="#FFF0F5">
+                                  <a href="">My Test</a>
+                                  <hr color="#FFF0F5">
+                                  <a href="" >Feedback </a>
+                                  <hr color="#FFF0F5">
+                                  <a href="">Change Password</a>
+                                  <hr color="#FFF0F5">
+                                  </td>
+                                  </ol>        
+                                   </tr>                            
+           </table>   
+                     
+                                   
+<table align="left">
+ <tr>
+ <td>
+ <label for="file">Resume:</label>
+<input type="file" name="file" id="file"> 
+<br>
+<br>
+</td>
+ </tr>
+<tr align="center">
+<td>
+<input type="submit" name="submit" value="Submit" align="center">
+</td>
+</tr>
+</table>
+</form>
+
+</body>
+
+</html>
